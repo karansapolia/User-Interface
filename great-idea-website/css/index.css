@@ -65,6 +65,9 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
 * {
 	max-width: 100%;
 }
@@ -72,10 +75,14 @@ h1, h2, h3, h4, h5 {
 .container {
 	width: 90%;
 	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
 }
 
-header nav {
-	width: 100%;
+nav {
+	position: fixed;
+	top: 0;
+	background-color: rgb(171, 253, 226);
+	width: 90%;
 	margin: 2% 0;
 }
 
@@ -85,9 +92,23 @@ nav .links {
 }
 
 .links a {
+	animation-name: color-change;
+	animation-duration: 3s;
+	animation-play-state: paused;
 	color: rgb(199, 199, 199);
 	text-decoration: none;
 	margin: 0 5% 0 0;
+	font-family: 'Roboto';
+}
+
+.links a:hover {
+	animation-play-state: running;
+}
+
+
+@keyframes color-change {
+	from { background-color: rgb(171, 253, 226);}
+	to { background-color: black;}
 }
 
 nav img {
@@ -96,7 +117,7 @@ nav img {
 	max-width: 200px;
 	margin-left: 5%;
 	vertical-align: middle;
-	align-content: right;
+	
 }
 
 .title h1 {
@@ -105,7 +126,7 @@ nav img {
 
 .section-one {
 	width: 100%;
-	margin: 0 auto;
+	margin: 7% auto 0 auto;
 	padding: 5% 0;
 	text-align: center;
 	border-bottom: 1px solid black;
